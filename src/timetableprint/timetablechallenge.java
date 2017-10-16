@@ -22,23 +22,21 @@ public class timetablechallenge {
 		System.out.println("What is the smallest number you want?");
 		low=in.nextInt();
 
-		//loop and ask questions
-		while (score<10) {
-			int num1=rnd.nextInt(hi-low+1)+low;
-			int num2=rnd.nextInt(hi-low+1)+low;
-			
-			System.out.println("Question "+ques+") "+num1+" x "+num2+" = ?");
-			int ans=in.nextInt();
-			if (ans==num1*num2) {
-				score=score+1;
-				System.out.println("Right");
-			}else {
-				score=0;
-				System.out.println("Wrong! The answer is "+(num1*num2));
+		System.out.print("\t");
+		for (int x=low;x<+hi;x++) {
+			System.out.print(x+"\t");
 
+			System.out.println();
+			System.out.print("\t");
+			for (int y=low;y<=hi;y++) {
+				System.out.println(y+"\n");
 			}
-			ques++;
 		}
-	
 	}
 }
+
+
+
+
+
+
