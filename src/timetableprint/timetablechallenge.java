@@ -13,7 +13,8 @@ public class timetablechallenge {
 
 		int hi;
 		int low;
-		int num;			
+		int num;
+		int hi2=0;
 
 		//Ask for hi low and num
 		System.out.println("I will print out any times table for you!");
@@ -22,21 +23,27 @@ public class timetablechallenge {
 		System.out.println("What is the smallest number you want?");
 		low=in.nextInt();
 
+		if (low>hi) {
+			hi2=hi;
+			hi=low;
+			low=hi2;
+			System.out.println("Switched it around.");
+		}
 		System.out.print("\t");
-		for (int x=low;x<+hi;x++) {
+		for (int x=low;x<=hi;x++) {
 			System.out.print(x+"\t");
-
-			System.out.println();
-			System.out.print("\t");
-			for (int y=low;y<=hi;y++) {
-				System.out.println(y+"\n");
+		}
+		System.out.print("\n");
+		for (int y=low;y<=hi;y++) {
+			System.out.print(y+"\t");
+			for (int x=low;x<=hi;x++) {
+				System.out.print(x*y+"\t");
 			}
+			System.out.println();
 		}
 	}
+
 }
-
-
-
 
 
 
